@@ -120,6 +120,7 @@
           <h2 class="work-text">Чим ми займаемось</h2>
           <ul class="work-list list">
             <li class="work-foto">
+              <div class="work-tumb">
               <img
                 class="work-picture"
                 width="370"
@@ -127,8 +128,11 @@
                 src="./images/lap.jpg"
                 alt="lap"
               />
+              <p class="work-descrip">ДЕСКТОПНІ ДОДАТКИ</p>
+              </div>
             </li>
             <li class="work-foto">
+              <div class="work-tumb">
               <img
                 class="work-picture"
                 width="370"
@@ -136,8 +140,11 @@
                 src="./images/tlfn.jpg"
                 alt="tlfn"
               />
+              <p class="work-descrip">МОБІЛЬНІ ДОДАТКИ</p>
+              </div>
             </li>
             <li class="work-foto">
+              <div class="work-tumb">
               <img
                 class="work-picture"
                 width="370"
@@ -145,6 +152,8 @@
                 src="./images/tab.jpg"
                 alt="tab"
               />
+              <p class="work-descrip">ДИЗАЙНЕРСКІ РІШЕННЯ</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -457,6 +466,27 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-subscribe">
+          <b class="footer-subscribe-text">Підпишіться на розсилку</b>
+          <form class="subscribe" name="subscribe" autocomplete="on">
+            <input
+              type="email"
+              name="subscribe-mail"
+              id="subscribe-mail"
+              placeholder="E-mail"
+              class="subscribe-input"
+            />
+            <button type="submit" class="footer-btn-submit">
+              Підписатись
+              <svg class="footer-btn-submit-icon">
+                <use href="./images/symbol-6.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
           <div class="backdrop is-hidden" data-modal>
           <div class="modal">
           <button class="modal-close" data-modal-close >
@@ -467,9 +497,83 @@
               fill="#000"/>
           </svg>
           </button>
+          <form class="form-backdrop" name="form" autocomplete="on">
+            <strong class="form-title"
+              >Залиште свої дані, ми вам передзвонимо</strong
+            >
+            <div role="group" class="form-group-fild">
+              <label class="form-label" for="user-name">Імя</label>
+              <div class="form-field">
+                <svg class="input-icon">
+                  <use
+                    href="./images/symbol-6.svg#icon-person-black-18dp-1"
+                  ></use>
+                </svg>
+                <input
+                  type="text"
+                  class="form-input"
+                  name="user-name"
+                  id="user-name"
+                  placeholder=" "
+                  required
+                  autofocus
+                />
+              </div>
+              <label class="form-label" for="user-phone">Телефон</label>
+              <div class="form-field">
+                <svg class="input-icon">
+                  <use
+                    href="./images/symbol-6.svg#icon-phone-black-18dp-1"
+                  ></use>
+                </svg>
+                <input
+                  type="tel"
+                  class="form-input"
+                  name="user-phone"
+                  id="user-phone"
+                  placeholder=" "
+                  required
+                />
+              </div>
+              <label class="form-label" for="user-email">Пошта</label>
+              <div class="form-field">
+                <svg class="input-icon">
+                  <use
+                    href="./images/symbol-6.svg#icon-email-black-18dp-1"
+                  ></use>
+                </svg>
+                <input
+                  type="email"
+                  class="form-input"
+                  name="user-email"
+                  id="user-email"
+                  placeholder=" "
+                  required
+                />
+              </div>
+              <label class="form-label" for="user-notes">Комментар</label>
+              <textarea
+                class="textarea-form"
+                name="user-notes"
+                id="user-notes"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+            <label class="form-agreement">
+              <input
+                class="checkbox visually-hidden"
+                type="checkbox"
+                name="user-agreement"
+                required=""
+              />
+              <span class="icon-cheked"></span>
+              Погоджуюся з розсилкою та приймаю 
+              <a class="form-agreement-link" href="">Умови договору</a>
+            </label>
+            <button class="form-submit-btn" type="submit">Відправити</button>
+          </form>
         </div>
       </div>
-    </footer>
-    <script src="./js/modal.js"></script>
-  </body>
-</html>
+      <script src="./js/modal.js"></script>
+    </body>
+  </html>

@@ -105,7 +105,6 @@ section {
   margin-left: auto;
   text-align: center;
   justify-content: center;
-
 }
 
 .contacts-list li:not(:last-child) {
@@ -134,25 +133,28 @@ section {
   display: block;
   position: relative;
 
-  cursor: pointer;transition-property: color;
+  cursor: pointer;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-link.current::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom:-34px;
-  border-radius: 2px;
-  background-color: #2196f3;
+  content: "";
+  display: block;
   width: 100%;
   height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: -34px;
+  left: 0;
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
 }
-
 
 .contacts-item:hover,
 .contacts-item:focus {
@@ -178,8 +180,6 @@ section {
 }
 
 /* ----------------------------hero----------------------------*/
-
-
 
 .overlay {
   background-image: linear-gradient(
@@ -243,7 +243,6 @@ section {
 .button-hero:focus {
   background-color: var(--button-hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
 }
 /*---------------------------- benefits----------------------------*/
 
@@ -332,6 +331,7 @@ h2 {
   margin-top: 0;
   margin-bottom: 50px;
 }
+
 .work-tumb {
   position: relative;
 }
@@ -352,8 +352,6 @@ h2 {
   text-transform: uppercase;
   color: #ffffff;
 }
-
-
 
 /*-----------------------------unit----------------------------------*/
 
@@ -422,6 +420,7 @@ h3 {
   border-radius: 50%;
   border: 1px solid transparent;
   color: #afb1b8;
+
   cursor: pointer;
   transition-property: color, background-color;
   transition-duration: 250ms;
@@ -452,6 +451,7 @@ h3 {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
+
   cursor: pointer;
   transition-property: color, border;
   transition-duration: 250ms;
@@ -527,8 +527,9 @@ footer .logo {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
   cursor: pointer;
-  transition-property: color, border;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -566,7 +567,6 @@ footer .logo {
   border-radius: 50%;
   color: #ffffff;
   cursor: pointer;
-  cursor: pointer;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -587,6 +587,73 @@ footer .logo {
 .footer-button-item:not(:last-child) {
   margin-right: 10px;
 }
+
+.footer-subscribe {
+  margin-left: auto;
+  color: #ffffff;
+}
+.footer-subscribe-text {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+.subscribe {
+  display: flex;
+}
+.subscribe-input {
+  display: flex;
+  align-items: center;
+  min-width: 358px;
+  height: 50px;
+  padding: 0;
+  padding-left: 16px;
+  margin-right: 12px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn-submit-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: #ffffff;
+}
+
+.footer-btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--button-hover-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn-submit:hover,
+.footer-btn-submit:focus {
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 /*----------------modal---------------------------------*/
 .backdrop {
   position: fixed;
@@ -624,8 +691,18 @@ footer .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 490px;
-  margin-top: 8px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.modal-cross:hover {
+  color: red;
+}
+
+.modal-cross:focus {
+  var (--accent-color: #2196f3);
 }
 
 .backdrop.is-hidden {
@@ -638,9 +715,158 @@ footer .logo {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
+.form-backdrop {
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.form-title {
+  display: block;
+  font-size: 20px;
+  line-height: 1.125;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-group-fild {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.125;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.form-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input-icon {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: #212121;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within > .input-icon {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.subscribe-input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  color: #757575;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+  border-color: var(--accent-color);
+}
+
+.textarea-form {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: #2196F3
+  padding: 12px 16px;
+  margin: 0;
+  resize: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-agreement {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.form-agreement-link {
+  color: var(--accent-color);
+}
+
+.form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-cheked {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  margin-right: 7px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .icon-cheked {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/icon/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.form-submit-btn {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /*---------------portfolio.work-type--------------------------*/
 
-.work-type { 
+.work-type {
 }
 .button-main-link:hover,
 .button-main-link:focus {
@@ -648,7 +874,6 @@ footer .logo {
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    
 }
 
 .button-main-list {
@@ -675,6 +900,8 @@ footer .logo {
   border: transparent;
   padding: 6px 22px;
   display: inline-block;
+
+  cursor: pointer;
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -711,11 +938,12 @@ footer .logo {
   max-width: 100%;
   height: auto;
 }
+
 .example-thumb {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  background-color:  var(--accent-color);
+  background-color: var(--accent-color);
   overflow: hidden;
 }
 
@@ -734,7 +962,7 @@ footer .logo {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: rgba(33, 150, 243, 0.9);;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -762,9 +990,12 @@ footer .logo {
 .example-item {
   margin: 15px;
 }
-
 .example-link {
   display: block;
+  cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .example-link:hover {
